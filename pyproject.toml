@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "build-your-first-agent"
+version = "0.1.0"
+description = "Zero-to-deployed tutorial with Python, TypeScript, and no-code tracks."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "erron.ai"}]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/erron-ai/build-your-first-agent"
+Issues = "https://github.com/erron-ai/build-your-first-agent/issues"
+
+[project.scripts]
+build-your-first-agent = "build_your_first_agent.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
